@@ -38,8 +38,22 @@ public class Main {
 		LocalDate fecha3 = LocalDate.now();
 		TiempoRecord record = new TiempoRecord(fecha3);
 
-		record.fechaFormatoLargo();
-		record.fechaFormatocorto();
+		DateTimeFormatter formato3 = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+		String resultado = formato3.format(record.fecha());
+		System.out.println(resultado);
+
+		DateTimeFormatter formato4 = DateTimeFormatter.ofPattern("dd - MM - yyyy");
+		String resultado1 = formato4.format(record.fecha());
+		System.out.println(resultado1);
+
+		/*
+		 * 
+		 * public void fechaFormatocorto() {
+		 * 
+		 * DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd - MM - yyyy");
+		 * String resultado = formato.format(this.fecha); System.out.println(resultado);
+		 * }
+		 */
 
 	}
 
